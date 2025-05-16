@@ -25,9 +25,22 @@ function isValidEmail(email) {
 
 // Check required fields
 function checkRequired(inputArray) {
-    inputArray.forEach(function(input){
-        console.log(input);
+
+    // biome-ignore lint/complexity/useArrowFunction: <explanation>
+    // biome-ignore lint/complexity/noForEach: <explanation>
+        inputArray.forEach(function(input){
+        if (input.value === '') {
+            showError(input, `${getFieldName(input)} is required`);
+        } else {
+            showSuccess(input);
+        }
     });
+}
+
+// Get field name
+
+function getFieldName(input) {
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
 // Event listeners
