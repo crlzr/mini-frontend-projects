@@ -21,39 +21,49 @@ function showSuccess(input) {
 function isValidEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()\[\]\\.,;:\s@"]+\.)+[^<>()\[\]\\.,;:\s@"]{2,})$/;
     return re.test(String(email).toLowerCase());
-}   
+}
 
-// Event listeners 
+// Check required fields
+function checkRequired(inputArray) {
+    inputArray.forEach(function(input){
+        console.log(input);
+    });
+}
+
+// Event listeners
 // biome-ignore lint/complexity/useArrowFunction: <explanation>
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    if (username.value === '') {
-        showError(username, 'Username cannot be blank');
-    } else {    
-        showSuccess(username);
-    }
+    checkRequired([username, email, password, password2]);
 
-    if (email.value === '') {
-        showError(email, 'Email cannot be blank');
-    } else if (!isValidEmail(email.value)) {
-        showError(email, 'Email is not valid');
-    } else {
-        showSuccess(email);
-    }
 
-    if (password.value === '') {
-        showError(password, 'Password cannot be blank');
-    } else if (password.value.length < 6) {
-        showError(password, 'Password must be at least 6 characters');
-    } else {
-        showSuccess(password);
-    }
-    if (password2.value === '') {
-        showError(password2, 'Password cannot be blank');
-    } else if (password2.value !== password.value) {
-        showError(password2, 'Passwords do not match');
-    } else {
-        showSuccess(password2);
-    } 
+    // if (username.value === '') {
+    //     showError(username, 'Username cannot be blank');
+    // } else {
+    //     showSuccess(username);
+    // }
+
+    // if (email.value === '') {
+    //     showError(email, 'Email cannot be blank');
+    // } else if (!isValidEmail(email.value)) {
+    //     showError(email, 'Email is not valid');
+    // } else {
+    //     showSuccess(email);
+    // }
+
+    // if (password.value === '') {
+    //     showError(password, 'Password cannot be blank');
+    // } else if (password.value.length < 6) {
+    //     showError(password, 'Password must be at least 6 characters');
+    // } else {
+    //     showSuccess(password);
+    // }
+    // if (password2.value === '') {
+    //     showError(password2, 'Password cannot be blank');
+    // } else if (password2.value !== password.value) {
+    //     showError(password2, 'Passwords do not match');
+    // } else {
+    //     showSuccess(password2);
+    // }
 });
