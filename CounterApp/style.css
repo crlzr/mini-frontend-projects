@@ -1,0 +1,44 @@
+.button-container {
+  background-color: lightblue;
+  font-size: 20px;
+  padding: 50px;
+  text-align: center;
+  height: 20px;
+  width: 300px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;$
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.count {
+  background-color: orange;
+  font-size: 2rem;
+  padding: 30px 0;
+  text-align: center;
+  width: 200px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.button-group button {
+  background-color: lightblue;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
