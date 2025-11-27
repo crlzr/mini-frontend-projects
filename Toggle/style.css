@@ -1,0 +1,13 @@
+.img-container .mainImage {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.img-container .thumbnail {
+  width: 20%;
+  height: 20%;
+  margin: 10px 10px;
+  cursor: pointer;
+}
