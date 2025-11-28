@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+.total-menu {
+  width: 30px;
+}
+
+.total-menu .menu {
+  cursor: pointer;
+  width: 30px;
+}
+
+.menu span {
+  display: block;
+  height: 4px;
+  background-color: burlywood;
+  margin: 5px 0;
+  border-radius: 2px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.menu-section {
+  color: burlywood;
+}
+
+.menu-item {
+  padding-top: 10px;
+}
