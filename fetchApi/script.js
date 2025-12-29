@@ -14,7 +14,7 @@ async function getUsers() {
     for (person of data) {
         const listElement = document.createElement("li");
         listElement.textContent = `
-        Name: ${person.name} Email: ${person.email}`
+        Name: ${person.name} Email: ${person.email} City: ${person.city} `
         ulList.append(listElement)
 
     }
