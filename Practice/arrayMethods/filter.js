@@ -11,4 +11,18 @@ function uniqueEvenNumbers(numbers) {
   return even;
 }
 
-console.log(uniqueEvenNumbers(numbers));
+//console.log(uniqueEvenNumbers(numbers));
+
+/*
+ Define a method/function that removes from a given array of integers all the values contained in a second array.
+ */
+
+function removeSameInts(list1, list2) {
+  let filtered = list1.filter((num) => !list2.includes(num));
+  return filtered;
+}
+
+const list1 = [1, 1, 2, 3, 1, 2, 3, 4];
+const list2 = [1, 3];
+
+console.log(removeSameInts(list1, list2));
