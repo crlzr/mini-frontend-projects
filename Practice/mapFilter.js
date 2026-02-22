@@ -39,7 +39,7 @@ const words = ["cat", "house", "tree", "a", "elephant"];
 const moreThan3 = (words) =>
   words.filter((word) => word.length > 3).map((word) => word.length);
 
-console.log(moreThan3(words));
+//console.log(moreThan3(words));
 
 /*
 
@@ -57,4 +57,24 @@ function returnCapitalisedWords(words) {
   return capitalised;
 }
 
-console.log(returnCapitalisedWords(words));
+//console.log(returnCapitalisedWords(words));
+
+// Task: From an array of people objects, return an array of names of people
+// who are 25 or older, all in uppercase.
+
+const people = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 },
+  { name: "Charlie", age: 22 },
+  { name: "David", age: 27 },
+];
+
+function getAdultsUppercase(arr) {
+  let filtered = arr.filter((person) => person.age >= 25);
+  let upperCase = filtered.map((person) => person.name.toUpperCase());
+  return upperCase;
+}
+
+console.log(getAdultsUppercase(people));
+// Expected output:
+// ["ALICE", "BOB", "DAVID"]
