@@ -13,6 +13,11 @@ function learnShift(arr) {
 
 console.log(learnShift(arr)); // [2, [5, 1, 4, 3]]
 
+/*
+Take out the odd ones
+keep the even ones at the same array position
+*/
+
 const numbers = [8, 3, 7, 2, 5, 4];
 
 function sortNumbers() {
@@ -26,4 +31,14 @@ function sortNumbers() {
   return numbers;
 }
 
-console.log(sortNumbers(numbers));
+//console.log(sortNumbers(numbers));
+
+function sortNumbersWithMap(numbers) {
+  // find odd ones and sort them ascending
+  let odds = numbers.filter((num) => num % 2 === 1).sort((a, b) => a - b);
+
+  // map over the numbers array and replace the odd ones with the ones in odds
+  return numbers.map((n) => (n % 2 === 1 ? odds.shift() : n));
+}
+
+console.log(sortNumbersWithMap(numbers));
