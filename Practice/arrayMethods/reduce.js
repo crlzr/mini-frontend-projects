@@ -30,5 +30,5 @@ function wordCount(words) {
   }, {}); // <-- empty object as initial value
 }
 
-console.log(wordCount(words));
+//console.log(wordCount(words));
 // Output: { apple: 3, banana: 2, orange: 1 }

@@ -25,4 +25,20 @@ function removeSameInts(list1, list2) {
 const list1 = [1, 1, 2, 3, 1, 2, 3, 4];
 const list2 = [1, 3];
 
-console.log(removeSameInts(list1, list2));
+//console.log(removeSameInts(list1, list2));
+
+/*
+Write a function that counts how many even numbers are in an array.
+*/
+
+const numbersArr = [1, 2, 3, 4, 5, 5, 6, 7, 8, 8, 5, 3, 5, 6, 7, 7];
+
+function countNumbers(arr) {
+  let mapped = arr.map((char) => {
+    let count = arr.filter((eachChar) => eachChar === char).length;
+    return count;
+  });
+  return mapped;
+}
+
+console.log(countNumbers(numbersArr));
