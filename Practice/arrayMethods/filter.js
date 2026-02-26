@@ -42,3 +42,9 @@ function countNumbers(arr) {
 }
 
 console.log(countNumbers(numbersArr));
+
+function disemvowel(str) {
+  let vocals = "aeiouAEIOU";
+  let strArr = str.split("").filter((char) => !vocals.include(char));
+  return strArr;
+}

@@ -32,3 +32,56 @@ function wordCount(words) {
 
 //console.log(wordCount(words));
 // Output: { apple: 3, banana: 2, orange: 1 }
+
+/*
+You will be given an array of objects representing data about developers.
+
+Your task is to return an object which includes the count of each coding language represented at the meetup.
+*/
+
+var list1 = [
+  {
+    firstName: "Noah",
+    lastName: "M.",
+    country: "Switzerland",
+    continent: "Europe",
+    age: 19,
+    language: "C",
+  },
+  {
+    firstName: "Anna",
+    lastName: "R.",
+    country: "Liechtenstein",
+    continent: "Europe",
+    age: 52,
+    language: "JavaScript",
+  },
+  {
+    firstName: "Ramon",
+    lastName: "R.",
+    country: "Paraguay",
+    continent: "Americas",
+    age: 29,
+    language: "Ruby",
+  },
+  {
+    firstName: "George",
+    lastName: "B.",
+    country: "England",
+    continent: "Europe",
+    age: 81,
+    language: "C",
+  },
+];
+
+// { C: 2, JavaScript: 1, Ruby: 1 }
+
+function countLanguages(list) {
+  return list.reduce((count, dev) => {
+    const lang = dev.language;
+    count[lang] = (count[lang] || 0) + 1;
+    return count;
+  }, {});
+}
+
+console.log(countLanguages(list1));
